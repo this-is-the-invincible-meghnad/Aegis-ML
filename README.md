@@ -40,3 +40,24 @@ cd Aegis-ML
 
 # 2. Install Python dependencies
 pip install -r requirements.txt
+
+
+
+
+
+
+
+
+---
+
+## ⚖️ Legal Disclaimer & Terms of Use
+
+*⚠️ READ BEFORE USE*
+
+*Aegis-ML* is a security research tool designed for *educational purposes, **authorized penetration testing, and **network defense analysis*.
+
+1. *Authorized Use Only:* You are strictly prohibited from using this tool on government servers, corporate networks, or any device you do not own without explicit written permission.
+2. *Liability:* The developer (*Invincible Meghnad) and contributors are **not responsible* for any damage, data loss, or legal consequences caused by the use or misuse of this software.
+3. *Compliance:* Unauthorized scanning is a crime under the *Information Technology Act, 2000 (Section 43 & 66)* in India, the *Computer Fraud and Abuse Act (CFAA)* in the USA, and similar laws globally.
+
+*USE AT YOUR OWN RISK.*
