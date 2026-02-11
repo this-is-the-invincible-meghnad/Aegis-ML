@@ -4,7 +4,7 @@ import joblib
 
 print("[1/3] Creating ADVANCED training data...")
 
-# More data = Smarter Brain
+
 # 1 = Open, 0 = Closed
 data = {
     '21':   [0, 1, 0, 0, 1, 0, 0, 1], # FTP

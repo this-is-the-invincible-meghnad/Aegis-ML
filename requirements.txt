@@ -1,0 +1,5 @@
+python-nmap
+pandas
+scikit-learn
+joblib
+colorama
