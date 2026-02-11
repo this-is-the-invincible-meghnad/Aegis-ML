@@ -2,33 +2,25 @@ import pandas as pd
 from sklearn.ensemble import RandomForestClassifier
 import joblib
 
-print("[1/3] Creating ADVANCED training data...")
+print("[1/3] Loading 'dataset.csv'...")
 
+try:
+    # Load the CSV file (Real Data Mode)
+    df = pd.read_csv('dataset.csv')
+    print(f"[+] Successfully loaded {len(df)} training examples.")
+except FileNotFoundError:
+    print("[-] ERROR: dataset.csv not found! Create it first.")
+    exit()
 
-# 1 = Open, 0 = Closed
-data = {
-    '21':   [0, 1, 0, 0, 1, 0, 0, 1], # FTP
-    '22':   [1, 1, 1, 0, 0, 1, 0, 0], # SSH
-    '23':   [0, 0, 1, 0, 1, 0, 0, 1], # Telnet (Unsafe)
-    '80':   [1, 1, 1, 1, 0, 1, 1, 0], # HTTP
-    '443':  [1, 1, 0, 1, 0, 1, 1, 0], # HTTPS
-    '445':  [0, 0, 1, 1, 1, 0, 0, 1], # SMB (Critical Risk)
-    '3389': [0, 0, 0, 0, 1, 0, 0, 1], # RDP
-    'label': [
-        'SAFE', 'SAFE', 'DANGEROUS', 'DANGEROUS', 'DANGEROUS', 
-        'SAFE', 'SAFE', 'DANGEROUS'
-    ]
-}
-
-df = pd.DataFrame(data)
+# Separate features (X) and labels (y)
 X = df.drop('label', axis=1)
 y = df['label']
 
-print("[2/3] Training the Aggressive Model...")
-# We use n_estimators=200 for a bigger brain
-model = RandomForestClassifier(n_estimators=200)
+print("[2/3] Training the Random Forest model...")
+# n_estimators=100 means 100 "decision trees" voting
+model = RandomForestClassifier(n_estimators=100)
 model.fit(X, y)
 
 print("[3/3] Saving 'aegis_brain.pkl'...")
 joblib.dump(model, 'aegis_brain.pkl')
-print("DONE! Brain upgraded.")
+print("DONE! Brain upgraded with external data.")
