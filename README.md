@@ -58,7 +58,7 @@ This project demonstrates how Machine Learning can be applied to Cybersecurity f
 ### Setup
 ```bash
 # 1. Clone the repository
-git clone [https://github.com/YOUR_USERNAME/Aegis-ML.git](https://github.com/YOUR_USERNAME/Aegis-ML.git)
+git clone [https://github.com/this-is-the-invincible-meghnad/Aegis-ML.git](https://github.com/this-is-the-invincible-meghnad/Aegis-ML.git)
 cd Aegis-ML
 
 # 2. Install Python dependencies
