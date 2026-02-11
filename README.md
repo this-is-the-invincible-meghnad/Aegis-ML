@@ -18,7 +18,6 @@ Unlike standard scanners that simply report open ports, Aegis-ML uses a trained 
 * **CEH Compliance:** Fully supports Module 3 requirements including **OS Fingerprinting** (`-O`) and **NSE Scripting** (`-sC`).
 * **Risk Scoring:** Provides a real-time confidence percentage (e.g., "86.00% Safe") to prioritize security actions.
 * **Cyberpunk UI:** Professional, color-coded CLI interface for clear threat visualization.
-*
 
 ## 🛠️ Tech Stack
 * **Language:** Python 3
