@@ -12,6 +12,14 @@
 
 Unlike standard scanners that simply report open ports, Aegis-ML uses a trained **Random Forest Classifier** to analyze port patterns. It predicts the **probability** of a system being vulnerable and assigns a confidence score.
 
+## 🚀 Key Features
+* **Smart Integration:** Automates `Nmap` for high-speed port discovery and service versioning (`-sV`).
+* **AI Brain:** Uses a trained `Random Forest Classifier` to analyze port signatures and predict threat levels.
+* **CEH Compliance:** Fully supports Module 3 requirements including **OS Fingerprinting** (`-O`) and **NSE Scripting** (`-sC`).
+* **Risk Scoring:** Provides a real-time confidence percentage (e.g., "86.00% Safe") to prioritize security actions.
+* **Cyberpunk UI:** Professional, color-coded CLI interface for clear threat visualization.
+*
+
 ## 🛠️ Tech Stack
 * **Language:** Python 3
 * **Scanning Engine:** Nmap (Network Mapper)
