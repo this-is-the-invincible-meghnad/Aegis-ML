@@ -37,8 +37,7 @@ def scan_target(ip):
     
     # -sV means "Service Version" (Find out WHAT is running)
     # -T4 is Fast Timing
-    nm.scan(ip, arguments='-sV -T4')
-    
+    nm.scan(target_ip, arguments='-sV -O -sC -T4')
     if ip not in nm.all_hosts():
         print(Fore.RED + "[-] Host is DOWN or blocking our pings.")
         return
